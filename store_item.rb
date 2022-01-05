@@ -20,26 +20,14 @@
 
 #rewrite as a class
 class Store
+  attr_reader :name, :color, :price
+  attr_writer :price
+  #attr_accessor gives you a getter and setter (reader and writer)
+
   def initialize(input_item_name, input_color, input_price)
     @name = input_item_name
     @color = input_color
     @price = input_price
-  end
-
-  def name
-    @name
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-
-  def price=(value)
-    @price = value
   end
 
   def print_price_info
