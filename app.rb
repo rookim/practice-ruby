@@ -8,6 +8,7 @@ item1 = Food.new(item: 1, name: "Brookside Dark Chocolate", color: "brown", pric
 item2 = NotFood.new(item: 2, name: "Polka-dotted Headband", color: "pink and white", price: 9.99, return_policy: "30 days")
 item3 = NotFood.new(item: 3, name: "iPhone 13 Pro", color: "Sierra Blue", price: 899, return_policy: "14 days")
 
+instances = [item1, item2, item3]
 items = 3
 
 puts "RO'S RACK"
@@ -37,7 +38,7 @@ while switch
     else
       sh = "NA"
     end
-    print "item: "
+    print "item number: "
     array << it = gets.chomp.to_i
     print "name: "
     array << na = gets.chomp
@@ -56,6 +57,9 @@ while switch
       item = NotFood.new(item: it, name: na, price: pr, color: co, shelf_life: sh, return_policy: re)
     end
 
+    # add to list of instances
+    instances << item
+
     # adds new data to table
     table << array
     puts table.render(:ascii)
@@ -65,8 +69,7 @@ while switch
   if response.downcase == "r"
     print "Enter item number: "
     number = gets.chomp.to_i
-    #i dunno how to pull the instance
-    p table.row(number-1)
+    p instances[number-1]
   end
 
   #quit out of program
