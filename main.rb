@@ -7,4 +7,4 @@ item2 = NotFood.new(name: "Polka-dotted Headband", color: "pink and white", pric
 item3 = NotFood.new(name: "iPhone 13 Pro", color: "Sierra Blue", price: 899, return_policy: "14 days")
 
 puts item1.shelf_life
-puts item1.print_price_info
+item1.print_price_info
