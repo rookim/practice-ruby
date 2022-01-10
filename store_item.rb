@@ -1,9 +1,10 @@
 module Store
-  attr_accessor :name, :color, :price
+  attr_accessor :name, :color, :price, :return_policy
   def initialize (options_hash)
     @name = options_hash[:name]
-    @color = options_hash[:color]
     @price = options_hash[:price]
+    @color = options_hash[:color]
+    @return_policy = options_hash[:return_policy]
   end
 
   def print_price_info

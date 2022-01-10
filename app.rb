@@ -4,7 +4,6 @@ require "./food.rb"
 require "./not_food.rb"
 
 # create/read/update/delete store items
-
 item1 = Food.new(name: "Brookside Dark Chocolate", color: "brown", price: 4.99, shelf_life: "6 months")
 item2 = NotFood.new(name: "Polka-dotted Headband", color: "pink and white", price: 9.99, return_policy: "30 days")
 item3 = NotFood.new(name: "iPhone 13 Pro", color: "Sierra Blue", price: 899, return_policy: "14 days")
@@ -20,3 +19,22 @@ table = TTY::Table.new(header: ["item", "name", "price", "color", "shelf_life", 
 
 # render method formats table nicely
 puts table.render(:ascii)
+puts
+
+switch = true
+
+while switch
+
+  print "[C]reate [R]ead [U]pdate [D]elete [Q]uit: "
+  response = gets.chomp
+  # create
+  if response.downcase == "c"
+    
+  end
+
+  #quit out of program
+  if response.downcase == "q"
+    puts "Goodbye!"
+    switch = false
+  end
+end
