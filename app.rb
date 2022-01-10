@@ -25,7 +25,7 @@ puts
 switch = true
 while switch
 
-  print "[C]reate [R]ead [U]pdate [D]elete [Q]uit: "
+  print "[C]reate [R]ead [Q]uit: "
   response = gets.chomp
   # create
   if response.downcase == "c"
