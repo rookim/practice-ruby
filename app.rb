@@ -52,16 +52,13 @@ while switch
     
     #make a new instance
     if fo == "y"
-      item = Food.new(item: it, name: na, price: pr, color: co, return_policy: re)
+      product = Food.new(item: it, name: na, price: pr, color: co, shelf_life: sh, return_policy: re)
     elsif fo == "n"
-      item = NotFood.new(item: it, name: na, price: pr, color: co, shelf_life: sh, return_policy: re)
+      product = NotFood.new(item: it, name: na, price: pr, color: co, return_policy: re)
     end
 
-    # add to list of instances
-    instances << item
-
     # adds new data to table
-    table << array
+    table << [product.item, product.name, product.price, product.color, product.shelf_life, product.return_policy]
     puts table.render(:ascii)
   end
 
